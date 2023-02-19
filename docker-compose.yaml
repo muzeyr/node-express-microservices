@@ -16,3 +16,20 @@ services:
       - "5672:5672"
       # HTTP management UI
       - "15672:15672"
+  users:
+    build:
+      context: ./user-services
+      args:
+        - NODE_ENV=development
+      target: dev
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./user-services:/app/
+    environment:
+      - SERVICE=user-services
+    env_file:
+      - ./user-services/.env
+    depends_on:
+      - postgresql
+      - rabbitmq

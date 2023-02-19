@@ -1,0 +1,14 @@
+{
+  "name": "users-services",
+  "version": "1.0.0",
+  "description": "A module for managing users",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^6.28.0"
+  },
+  "author": {
+    "name": "Uzeyr OZCAN",
+    "email": "muzeyr@gmail.com"
+  }
+}
